@@ -5,4 +5,81 @@
  * These should not conflict with bootstrap's CSS, but they may 
  * add more specific styles. 
  */
-
+.kill{
+  height: 15px;
+      width: 15px;
+      /* background: red; */
+      border: 1px solid red;
+      font-family: helvetica;
+      font-weight: 100;
+      text-align: center;
+      border-radius: 20px;
+      display: block;
+      font-size: 10px;
+      color: red;
+}
+ .brevit{
+   position: relative;
+   cursor:ns-resize !important;
+   margin:auto;
+ }
+ #bk{
+   height: 100%;
+   width: 20px;
+   background: rgba(0,0,0,.2);
+   display: block;
+   position: absolute;
+   top:0px;
+ }
+ .loc{
+   height: 20px;
+   width: 20px;
+   border-radius: 20px;
+   background: red;
+   position: absolute;
+ }
+ .loc:hover{
+   box-shadow: 1px 1px 1px rgba(0,0,0,.1);
+   z-index: 100;
+ }
+ .loc:active{
+   box-shadow: 1px 1px 1px rgba(0,0,0,.5);
+   background: blue;
+   
+ }
+ .info:hover{
+  z-index: 100;box-shadow: 0px 2px 3px rgba(0,0,0,.5);
+ }
+ .info{
+   position: absolute;
+   background: white;
+   padding:.5rem;
+   border:1px solid rgba(0,0,0,.1);
+   margin-left:.5rem;
+   background: #F3F3F3;
+   left:20px;
+   -webkit-touch-callout: none;
+       -webkit-user-select: none;
+       -khtml-user-select: none;
+       -moz-user-select: none;
+       -ms-user-select: none;
+       user-select: none;
+ }
+ #add{
+   position: absolute;
+   bottom: -40px;
+   display: block;
+   background: green;
+   width: 20px;
+   color: white;
+   text-align: center;
+ }
+ #minus{
+   position: absolute;
+   bottom: -20px;
+   display: block;
+   background: green;
+   width: 20px;
+   color: white;
+   text-align: center;
+ }

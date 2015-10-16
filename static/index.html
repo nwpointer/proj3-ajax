@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>brevit</title>
+	<script src="node_modules/jquery/dist/jquery.min.js" ></script>
+	<style>
+		#brevit{
+			position: relative;
+			cursor:ns-resize !important;
+			margin:auto;
+		}
+		#bk{
+			height: 100%;
+			width: 20px;
+			background: rgba(0,0,0,.2);
+			display: block;
+			position: absolute;
+			top:0px;
+		}
+		.loc{
+			height: 20px;
+			width: 20px;
+			border-radius: 20px;
+			background: red;
+			position: absolute;
+		}
+		.loc:hover{
+			box-shadow: 1px 1px 1px rgba(0,0,0,.1);
+		}
+		.loc:active{
+			box-shadow: 1px 1px 1px rgba(0,0,0,.5);
+		}
+		.info{
+			position: absolute;
+			left:20px;
+			-webkit-touch-callout: none;
+			    -webkit-user-select: none;
+			    -khtml-user-select: none;
+			    -moz-user-select: none;
+			    -ms-user-select: none;
+			    user-select: none;
+		}
+		#add{
+			position: absolute;
+			bottom: -40px;
+			display: block;
+			background: green;
+			width: 20px;
+			color: white;
+			text-align: center;
+		}
+		#minus{
+			position: absolute;
+			bottom: -20px;
+			display: block;
+			background: green;
+			width: 20px;
+			color: white;
+			text-align: center;
+		}
+	</style>
+	
+</head>
+<body>
+	<div id="content">
+		<div id="brevit"></div>
+	</div>
+	<script src="bundle.js" ></script>
+	<script>
+	$.get( "http://127.0.0.1:5000/_calc_times", { miles: 400 } )
+	  .done(function( data ) {
+	    console.log( data.result );
+	  });
+	</script>
+</body>
+</html>
