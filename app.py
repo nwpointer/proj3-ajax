@@ -19,7 +19,7 @@ import datetime # But we still need time
 from dateutil import tz  # For interpreting local times
 
 # Our own module
-# import acp_limits
+from acpBrevit import acpBrevit, addTouple
 
 
 ###
@@ -68,7 +68,8 @@ def calc_times():
   """
   app.logger.debug("Got a JSON request");
   miles = request.args.get('miles', 0, type=int)
-  return jsonify(result=miles * 2)
+  brevit = acpBrevit(miles)
+  return jsonify(min=brevit[0], max=brevit[1])
  
 #################
 #
